@@ -1,0 +1,12 @@
+#Test de nuestro servidor
+
+GET http://localhost:8080/api/v1/home
+
+###
+GET http://localhost:8080/api/v1/note
+
+###
+GET http://localhost:8080/api/v1/note/2
+
+###
+POST http://localhost:8080/api/v1/note
