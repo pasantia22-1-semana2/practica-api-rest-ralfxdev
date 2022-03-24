@@ -1,7 +1,7 @@
 import { Server } from "./server.js";
-import {config} from "../config/default.js"
+import { config } from "../config/default.js"
 
-function main(host, port, name){
+function main(host, port, name) {
     const srv = new Server(host, port, name)
     srv.initServer();
 }
