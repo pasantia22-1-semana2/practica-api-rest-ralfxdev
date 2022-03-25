@@ -95,4 +95,25 @@ export class NoteModels {
         let items = this.readJsonFile();
         return items.find((item) => item._id == id)
     }
+
+    updateByID(item){
+        let items = this.readJsonFile();
+        let updateItem = items.map(currentItem => {
+            if(currentItem._id == item._id){
+                return currentItem = item;
+            }
+            return currentItem;
+        });
+
+        this.writeJsonFile(updateItem);
+        return "Updated Success";
+    }
+
+    deleteById(id){
+        let items = this.readJsonFile();
+        let filterItems = items.filter(currentItem => currentItem._id != parseInt(id));
+
+        this.writeJsonFile(filterItems);
+        return "Delete Success";
+    }
 }
