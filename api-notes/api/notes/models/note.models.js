@@ -93,6 +93,6 @@ export class NoteModels {
 
     findByID(id) {
         let items = this.readJsonFile();
-        return items.find((item) => item.id == id)
+        return items.find((item) => item._id == id)
     }
 }

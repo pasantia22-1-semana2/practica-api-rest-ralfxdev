@@ -25,7 +25,8 @@ export class NoteController {
 
     //Obtener una nota
     getOneNote(req, res) {
-        let oneNote = noteModels.findByID(req.id);
+        const id = req.params.id
+        let oneNote = noteModels.findByID(id);
         res.json(oneNote);
     }
 }
